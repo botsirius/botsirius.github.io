@@ -98,20 +98,39 @@
     <div class="row">
       <div class="col-12">
         <div class="content">
+          <div class="center one">
+            <img src='assets/oakinklogo.png' width="45%">
+          </div>
           <h2 class="center content">OakInk: A Large-scale Knowledge Repository for Understanding Hand-Object
             Interaction</h2>
           <div class="center content authors">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="" target="_blank">
-              <span class="nowrap">AAAA<sup>1</sup></span>
+              <span class="nowrap"><sup>1,2</sup>Lixin Yang*</span>
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="" target="_blank">
-              <span class="nowrap">BBBB<sup>1</sup></span>
+              <span class="nowrap"><sup>1</sup>Kailin Li*</span>
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="" target="_blank">
-              <span class="nowrap">CCCC<sup>1</sup></span>
+              <span class="nowrap"><sup>1</sup>Xinyu Zhan*</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" target="_blank">
+              <span class="nowrap"><sup>1</sup>Fei Wu</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" target="_blank">
+              <span class="nowrap"><sup>1</sup>Anran Xu</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" target="_blank">
+              <span class="nowrap"><sup>1</sup>Liu Liu</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" target="_blank">
+              <span class="nowrap"><sup>1,2</sup>Cewu Lu</span>
             </a>
           </div>
           <div class="center content authors">
@@ -130,7 +149,27 @@
 
         <div class="section">
           <h3>Abstract</h3>
-          <p>We introduce OakInk. balabala</p>
+          <p>Learning how humans manipulate objects requires machines to acquire knowledge from two perspectives: one
+            for understanding object affordances and the other for learning human's interactions based on the
+            affordances. Even though these two knowledge bases are crucial, we find that current databases lack a
+            comprehensive awareness of them.</p>
+          <p>
+            In this work, we propose a multi-modal and rich-annotated knowledge
+            repository, <i>oakink</i>, for visual and cognitive understanding of hand-object interactions.
+            We start to collect 1,800 common household objects and annotate their affordances to construct the first
+            knowledge base: <i>oak</i>.
+            Given the affordance, we record rich human interactions with 100 selected objects in <i>oak</i>.
+            Finally, we transfer the interactions on the 100 recorded objects to their virtual counterparts through a
+            novel method: <i>tink</i>.
+            The recorded and transferred hand-object interactions constitute the second knowledge base: <i>ink</i>.
+          </p>
+          <p>
+            As a result, <i>oakink</i> contains 50,000 distinct affordance-aware and intent-oriented hand-object
+            interactions.
+            We benchmark <i>oakink</i> on pose estimation and grasp generation tasks.
+            Moreover, we propose two practical applications of <i>oakink</i>: intent-based interaction generation and
+            handover
+            generation.</p>
         </div>
 
         <!-- <div class="section">
@@ -165,12 +204,7 @@
           <div class="content">
             <h4>Citing DexYCB</h4>
             <p>Please cite DexYCB if it helps your research:</p>
-            <pre><code>@INPROCEEDINGS{chao:cvpr2021,
-  author    = {Yu-Wei Chao and Wei Yang and Yu Xiang and Pavlo Molchanov and Ankur Handa and Jonathan Tremblay and Yashraj S. Narang and Karl {Van Wyk} and Umar Iqbal and Stan Birchfield and Jan Kautz and Dieter Fox},
-  booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  title     = {{DexYCB}: A Benchmark for Capturing Hand Grasping of Objects},
-  year      = {2021},
-}</code></pre>
+            <pre><code></code></pre>
           </div>
         </div> -->
 
@@ -178,57 +212,89 @@
           <h3>Data</h3>
           <!-- <p>OakInk is licensed under <span class="underline"><a href="https://creativecommons.org/licenses/by-nc/4.0/"
                 target="_blank">CC BY-NC 4.0</a></span>.</p> -->
-          <p>We provide two options for downloading the dataset:</p>
+          <p>To download our dataset:</p>
           <ol>
             <li>
-              <p>A single compressed file that contains everything:<a
-                  href="https://drive.google.com/file/d/18fD8RtWJM_fBi3bsuQTzdjIKxdRYtl57" target="_blank"><span
-                    class="icon"> <i class="fas fa-download"></i> </span>dex-ycb-20210415.tar.gz</a> (119G). Download
+              <p>Download the object models used in <b><i>OakInk</i></b>:<a
+                  href="https://drive.google.com/file/d/14G_M_GvsAljRe0zC6p46aSzUXmbVdnJd/view?usp=sharing"
+                  target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>obj_all.zip</a> (108M).
+                Download
                 this file to a new folder and extract it with:</p>
-              <pre><code>tar zxvf dex-ycb-20210415.tar.gz</code></pre>
+              <pre><code>unzip obj_all.zip</code></pre>
             </li>
             <li>
-              <p>A breakdown to multiple compressed files, each containing a sub-folder. Download all the files below to
-                a new folder and extract them individually:</p>
+              <p>Download the annotated files for <b><i>OakInk</i>-Image</b>:<a
+                  href="https://drive.google.com/file/d/18PMWcqUSE9VutiLYh-krwkIE_yrhgLiW/view?usp=sharing"
+                  target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>anno.zip</a> (33M).
+                Download
+                this file to a new folder and extract it with:</p>
+              <pre><code>unzip anno.zip</code></pre>
+            </li>
+            <li>
+              <p>Download the annotated files for <b><i>OakInk</i>-Shape</b>:<a
+                  href="https://drive.google.com/file/d/1_RDfV87Cp7mu2oBNwU8RwIBfjidlA1An/view?usp=sharing"
+                  target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>oakink_shape.zip</a>
+                (31M).
+                Download
+                this file to a new folder and extract it with:</p>
+              <pre><code>unzip oakink_shape.zip</code></pre>
+            </li>
+            <li>
+              <p>For easier downloading, we divided the image data into 20 parts. Please download the files to the same
+                folder and unzip them individually:</p>
               <ul>
-                <li><a href="https://drive.google.com/file/d/1Ehh92wDE3CWAiKG7E9E73HjN2Xk2XfEk" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>20200709-subject-01.tar.gz</a> (12G)</li>
-                <li><a href="https://drive.google.com/file/d/1Uo7MLqTbXEa-8s7YQZ3duugJ1nXFEo62" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>20200813-subject-02.tar.gz</a> (12G)</li>
-                <li><a href="https://drive.google.com/file/d/1FkUxas8sv8UcVGgAzmSZlJw1eI5W5CXq" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>20200820-subject-03.tar.gz</a> (12G)</li>
-                <li><a href="https://drive.google.com/file/d/14up6qsTpvgEyqOQ5hir-QbjMB_dHfdpA" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>20200903-subject-04.tar.gz</a> (12G)</li>
-                <li><a href="https://drive.google.com/file/d/1NBA_FPyGWOQF5-X9ueAat5g8lDMz-EmS" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>20200908-subject-05.tar.gz</a> (12G)</li>
-                <li><a href="https://drive.google.com/file/d/1UWIN2-wOBZX2T0dkAi4ctAAW8KffkXMQ" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>20200918-subject-06.tar.gz</a> (12G)</li>
-                <li><a href="https://drive.google.com/file/d/1oWEYD_o3PVh39pLzMlJcArkDtMj4nzI0" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>20200928-subject-07.tar.gz</a> (12G)</li>
-                <li><a href="https://drive.google.com/file/d/1GTNZwhWbs7Mfez0krTgXwLPndvrw1Ztv" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>20201002-subject-08.tar.gz</a> (12G)</li>
-                <li><a href="https://drive.google.com/file/d/1j0BLkaCjIuwjakmywKdOO9vynHTWR0UH" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>20201015-subject-09.tar.gz</a> (12G)</li>
-                <li><a href="https://drive.google.com/file/d/1FvFlRfX-p5a5sAWoKEGc17zKJWwKaSB-" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>20201022-subject-10.tar.gz</a> (12G)</li>
-                <li><a href="https://drive.google.com/file/d/1CPqLjsaYNjE3xSJbuWmqaMsGvyGIxiKL" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>bop.tar.gz</a> (1.2G)</li>
-                <li><a href="https://drive.google.com/file/d/1UAwVKT4Rgb1fLcFoa1o71_-0NtSvvLAQ" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>calibration.tar.gz</a> (16K)</li>
-                <li><a href="https://drive.google.com/file/d/1cAzlQBpcTatI5ykYQ8ziQiHLUG_a_UpM" target="_blank"><span
-                      class="icon"> <i class="fas fa-download"></i> </span>models.tar.gz</a> (1.4G)</li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_0.tar</a> (6.1G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_1.tar</a> (5.5G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_2.tar</a> (5.7G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_3.tar</a> (6.4G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_4.tar</a> (6.3G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_5.tar</a> (6.5G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_6.tar</a> (5.5G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_7.tar</a> (5.8G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_8.tar</a> (5.9G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_9.tar</a> (6.0G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_10.tar</a> (5.6G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_11.tar</a> (5.8G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_12.tar</a> (5.7G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_13.tar</a> (5.8G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_14.tar</a> (5.5G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_15.tar</a> (5.7G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_16.tar</a> (5.7G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_17.tar</a> (5.8G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_18.tar</a> (5.8G) <i style="color:gray;">(password: XXXX)</i></li>
+                <li><a href="" target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                    </span>part_19.tar</a> (5.8G) <i style="color:gray;">(password: XXXX)</i></li>
               </ul>
             </li>
           </ol>
-          <p>Once you successfully download and extract the dataset, you should have a folder with the following
+          <!-- <p>Once you successfully download and extract the dataset, you should have a folder with the following
             structure:</p>
           <pre><code>├── 20200709-subject-01/
 ├── 20200813-subject-02/
 ├── ...
 ├── calibration/
-└── models/</code></pre>
-          <p>For instructions about using the dataset please see <span><a
-                href="https://github.com/NVlabs/dex-ycb-toolkit" target="_blank">dex-ycb-toolkit</a></span>.</p>
+└── models/</code></pre> -->
+          <p>We will release a well designed <b>toolkit</b> later.</p>
+
         </div>
 
         <!-- <div class="section">
@@ -258,7 +324,7 @@
 
         <div class="section">
           <h3>Contact</h3>
-          <p>Send any comments or questions to AAAA: <a href="mailto:xxx@xxxx">xxxx</a>.</p>
+          <p>Send any comments or questions to Lixin Yang: <a href="mailto:siriusyang@sjtu.edu.cn">email</a>.</p>
         </div>
 
         <hr>
