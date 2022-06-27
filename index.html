@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" type="image/png" href="assets/oakink_icon.png">
   <style>
     h2 {
       font-family: 'Rubik', sans-serif;
@@ -93,275 +94,296 @@
   </style>
 </head>
 
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="content">
-          <div class="center one">
-            <img src='assets/oakinklogo.png' width="45%">
-          </div>
-          <h2 class="center content">OakInk: A Large-scale Knowledge Repository for Understanding Hand-Object
-            Interaction</h2>
-          <div class="center content authors">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="" target="_blank">
-              <span class="nowrap"><sup>1,2</sup>Lixin Yang*</span>
-            </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="" target="_blank">
-              <span class="nowrap"><sup>1</sup>Kailin Li*</span>
-            </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="" target="_blank">
-              <span class="nowrap"><sup>1</sup>Xinyu Zhan*</span>
-            </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="" target="_blank">
-              <span class="nowrap"><sup>1</sup>Fei Wu</span>
-            </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="" target="_blank">
-              <span class="nowrap"><sup>1</sup>Anran Xu</span>
-            </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="" target="_blank">
-              <span class="nowrap"><sup>1</sup>Liu Liu</span>
-            </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="" target="_blank">
-              <span class="nowrap"><sup>1,2</sup>Cewu Lu</span>
-            </a>
-          </div>
-          <div class="center content authors">
-            <span><sup>1</sup>Shanghai Jiao Tong University, <sup>2</sup>Shanghai Qi Zhi Institute</span>
-          </div>
-          <div class="center authors">
-            <span>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022</span>
-          </div>
-        </div>
 
-        <!-- <div class="video">
-          <video autoplay="autoplay" muted="muted" loop="loop">
-            <source src="assets/dex-ycb-render.mp4" type="video/mp4">
-          </video>
-        </div> -->
-        <div class="center one">
-          <img src='assets/teaser.png' width="95%">
-        </div>
+<!-- Content -->
+<div class="container mt-5">
+  <!-- about.html -->
+  <div class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        <img class="left" src="assets/oakinklogo.png" width="40%" height="auto" alt="OakInk_logo.png">
+      </h1>
+      <br>
+      <h1>
+        <span class="font-weight-bold">OakInk: A Large-scale Knowledge Repository for Understanding Hand-Object
+          Interaction
+        </span>
+      </h1>
+    </header>
 
-        <div class="section">
-          <h3>Abstract</h3>
-          <p>Learning how humans manipulate objects requires machines to acquire knowledge from two perspectives: one
-            for understanding object affordances and the other for learning human's interactions based on the
-            affordances. Even though these two knowledge bases are crucial, we find that current databases lack a
-            comprehensive awareness of them.</p>
-          <p>
-            In this work, we propose a multi-modal and rich-annotated knowledge
-            repository, <i>oakink</i>, for visual and cognitive understanding of hand-object interactions.
-            We start to collect 1,800 common household objects and annotate their affordances to construct the first
-            knowledge base: <i>oak</i>.
-            Given the affordance, we record rich human interactions with 100 selected objects in <i>oak</i>.
-            Finally, we transfer the interactions on the 100 recorded objects to their virtual counterparts through a
-            novel method: <i>tink</i>.
-            The recorded and transferred hand-object interactions constitute the second knowledge base: <i>ink</i>.
-          </p>
-          <p>
-            As a result, <i>oakink</i> contains 50,000 distinct affordance-aware and intent-oriented hand-object
-            interactions.
-            We benchmark <i>oakink</i> on pose estimation and grasp generation tasks.
-            Moreover, we propose two practical applications of <i>oakink</i>: intent-based interaction generation and
-            handover
-            generation.</p>
-        </div>
+    <br />
 
-        <!-- <div class="section">
-          <h3>Paper</h3>
-          <div class="row content">
-            <div class="center image">
-              <a href="./assets/chao_cvpr2021.pdf" target="_blank">
-                <img src="./assets/pdf.png" height="176px" width="136px">
-                <br>
-                <span class="icon"> <i class="fas fa-file-pdf"></i> </span>
-                <span>PDF</span>
-              </a>
-            </div>
-            <div class="center image">
-              <a href="./assets/chao_cvpr2021_supp.pdf" target="_blank">
-                <img src="./assets/supplementary.png" height="176px" width="136px">
-                <br>
-                <span class="icon"> <i class="fas fa-file-pdf"></i> </span>
-                <span>Supplementary</span>
-              </a>
-            </div>
-            <div class="center image">
-              <a href="https://arxiv.org/abs/2104.04631" target="_blank">
-                <img src="./assets/arxiv.png" height="176px" width="136px">
-                <br>
-                <span class="icon"> <i class="fas fa-file-pdf"></i> </span>
-                <span>arXiv</span>
-              </a>
-            </div>
-          </div>
-          <br>
-          <div class="content">
-            <h4>Citing DexYCB</h4>
-            <p>Please cite DexYCB if it helps your research:</p>
-            <pre><code></code></pre>
-          </div>
-        </div> -->
+    <p>
+      <a
+        href='https://openaccess.thecvf.com/content/CVPR2022/html/Yang_OakInk_A_Large-Scale_Knowledge_Repository_for_Understanding_Hand-Object_Interaction_CVPR_2022_paper.html'>
+        <img src='https://img.shields.io/badge/Paper-PDF-yellow?style=flat&logo=googlescholar&logoColor=blue'
+          alt='Paper PDF'>
+      </a>
+      <a href='https://arxiv.org/abs/2203.15709' style='padding-left: 0.5rem;'>
+        <img src='https://img.shields.io/badge/ArXiv-PDF-green?style=flat&logo=arXiv&logoColor=green' alt='ArXiv PDF'>
+      </a>
+      <a href='#' style='padding-left: 0.5rem;'>
+        <img src='https://img.shields.io/badge/Youtube-Video-green?style=flat&logo=youtube&logoColor=red'
+          alt='Youtube Video'>
+      </a>
+      <a href='https://github.com/lixiny/OakInk' style='padding-left: 0.5rem;'>
+        <img src='https://img.shields.io/badge/GitHub-Code-green?style=flat&logo=github&logoColor=white'
+          alt='GitHub code'>
+      </a>
+    </p>
 
-        <div class="section">
-          <h3>Data</h3>
-          <!-- <p>OakInk is licensed under <span class="underline"><a href="https://creativecommons.org/licenses/by-nc/4.0/"
-                target="_blank">CC BY-NC 4.0</a></span>.</p> -->
-       
-          <p>Currently the Preview version of OakInk dataset is not properly organized and may have missing or disordered annotation.</p>
-          <p> Released tag planned date: </p> 
-          <p> - OakInk-Image-v1: 28th June 2022 (Dropbox & Baidu Pan); </p> 
-          <p> - OakInk-Shape: 26th June 2022 (Dropbox & Baidu Pan); </p>
-          <p> Download the full dataset with Released version.</p>
-          
-          <p>To download our dataset (PREVIEW VERSION):</p>
-          <ol>
-            <li>
-              <p>Download the object models used in <b><i>OakInk</i></b>:<a
-                  href="https://drive.google.com/file/d/14G_M_GvsAljRe0zC6p46aSzUXmbVdnJd/view?usp=sharing"
-                  target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>obj_all.zip</a> (108M).
-                Download
-                this file to a new folder and extract it with:</p>
-              <pre><code>unzip obj_all.zip</code></pre>
-            </li>
-            <li>
-              <p>Download the annotated files for <b><i>OakInk</i>-Image</b>:<a
-                  href="https://drive.google.com/file/d/18PMWcqUSE9VutiLYh-krwkIE_yrhgLiW/view?usp=sharing"
-                  target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>anno.zip</a> (33M).
-                Download
-                this file to a new folder and extract it with:</p>
-              <pre><code>unzip anno.zip</code></pre>
-            </li>
-            <li>
-              <p>Download the annotated files for <b><i>OakInk</i>-Shape</b>:<a
-                  href="https://drive.google.com/file/d/1_RDfV87Cp7mu2oBNwU8RwIBfjidlA1An/view?usp=sharing"
-                  target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>oakink_shape.zip</a>
-                (31M).
-                Download
-                this file to a new folder and extract it with:</p>
-              <pre><code>unzip oakink_shape.zip</code></pre>
-            </li>
-            <li>
-              <p>For easier downloading, we divided the image data into 20 parts. Please download the files to the same
-                folder and unzip them individually:</p>
-              <ul>
-                <li><a href="https://pan.baidu.com/s/1p87OYwhsCDOA812xTi3AEQ" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_0.tar</a> (6.1G) <i style="color:gray;">(password: sfh9)</i></li>
-                <li><a href="https://pan.baidu.com/s/1Y7JmOZdQw5sEcTY4W0N9wA" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_1.tar</a> (5.5G) <i style="color:gray;">(password: 6nhj)</i></li>
-                <li><a href="https://pan.baidu.com/s/1jjlOc6N4nKfSDCT-YQ1Jag" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_2.tar</a> (5.7G) <i style="color:gray;">(password: cw8l)</i></li>
-                <li><a href="https://pan.baidu.com/s/1-vc4va_dw1px6FP761ysIg" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_3.tar</a> (6.4G) <i style="color:gray;">(password: k15g)</i></li>
-                <li><a href="https://pan.baidu.com/s/1MLkWlWicQSI-vcz4emjjYw" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_4.tar</a> (6.3G) <i style="color:gray;">(password: h9lb)</i></li>
-                <li><a href="https://pan.baidu.com/s/1lGJBOg7Ly73_cNNnECxEpg" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_5.tar</a> (6.5G) <i style="color:gray;">(password: u4q5)</i></li>
-                <li><a href="https://pan.baidu.com/s/1xt1TZeI7vt9auvbt7mnQDQ" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_6.tar</a> (5.5G) <i style="color:gray;">(password: ghqq)</i></li>
-                <li><a href="https://pan.baidu.com/s/1jPRzJ48kWJ7VjHNeE1Pr6Q" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_7.tar</a> (5.8G) <i style="color:gray;">(password: cc8n)</i></li>
-                <li><a href="https://pan.baidu.com/s/1-o2Lxmfjl8nXdq19LnlDzg" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_8.tar</a> (5.9G) <i style="color:gray;">(password: 63hb)</i></li>
-                <li><a href="https://pan.baidu.com/s/1JBrMM482-_v7YsX2Q0r-fg" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_9.tar</a> (6.0G) <i style="color:gray;">(password: gqll)</i></li>
-                <li><a href="https://pan.baidu.com/s/149HbXCmpQLpmsTe2R1mxUg" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_10.tar</a> (5.6G) <i style="color:gray;">(password: rv5e)</i></li>
-                <li><a href="https://pan.baidu.com/s/1G831cGhMUII89l552LC_tg" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_11.tar</a> (5.8G) <i style="color:gray;">(password: pmsf)</i></li>
-                <li><a href="https://pan.baidu.com/s/1pYH7sqFCh_yVuM741CT3JA" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_12.tar</a> (5.7G) <i style="color:gray;">(password: uoov)</i></li>
-                <li><a href="https://pan.baidu.com/s/18Zx_XGs9lxicIqjDM3s_PA" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_13.tar</a> (5.8G) <i style="color:gray;">(password: 3j6i)</i></li>
-                <li><a href="https://pan.baidu.com/s/1iTJM_DKwlwUAnKprjGpOxA" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_14.tar</a> (5.5G) <i style="color:gray;">(password: mc3e)</i></li>
-                <li><a href="https://pan.baidu.com/s/1O0_g3nBn0B3InJphxt0dPg" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_15.tar</a> (5.7G) <i style="color:gray;">(password: guom)</i></li>
-                <li><a href="https://pan.baidu.com/s/1EwD5bQHKYk9ZApsZKUMY_g" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_16.tar</a> (5.7G) <i style="color:gray;">(password: gjm0)</i></li>
-                <li><a href="https://pan.baidu.com/s/1f8JYnmesySRR4R25KMMKuw" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_17.tar</a> (5.8G) <i style="color:gray;">(password: lo2u)</i></li>
-                <li><a href="https://pan.baidu.com/s/1PHjKU1BTIoDUYExxcMfA3A" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_18.tar</a> (5.8G) <i style="color:gray;">(password: onp8)</i></li>
-                <li><a href="https://pan.baidu.com/s/1j5WaWgOsqNst_1evwTOUPg" target="_blank"><span class="icon"> <i
-                        class="fas fa-download"></i>
-                    </span>part_19.tar</a> (5.8G) <i style="color:gray;">(password: p0no)</i></li>
-              </ul>
-            </li>
-          </ol>
-          <!-- <p>Once you successfully download and extract the dataset, you should have a folder with the following
-            structure:</p>
-          <pre><code>├── 20200709-subject-01/
-├── 20200813-subject-02/
-├── ...
-├── calibration/
-└── models/</code></pre> -->
-          <p>We will release a well designed <b>toolkit</b> later.</p>
+    <br />
 
-        </div>
+    <!-- News -->
+    <div class="news">
+      <h3>News</h3>
+      <div class="table-responsive">
+        <table class="table table-sm table-borderless">
 
-        <!-- <div class="section">
-          <h3>Code</h3>
-          <div class="row content">
-            <div class="center image">
-              <a href="https://github.com/NVlabs/dex-ycb-toolkit" target="_blank">
-                <img src="./assets/GitHub-Mark/PNG/GitHub-Mark-64px.png">
-              </a>
-            </div>
-            <div>
-              <span><a href="https://github.com/NVlabs/dex-ycb-toolkit" target="_blank">dex-ycb-toolkit</a></span>
-              <br>
-              <span>A Python package that provides evaluation and visualization tools for the DexYCB dataset.</span>
-            </div>
-          </div>
-        </div> -->
+          <tr>
+            <th scope="row">Jun 28, 2022</th>
+            <td>
+              OakInk <span class="font-weight-bold">version 2</span> (public) has been released.<img class="emoji"
+                title=":sparkles:" alt=":sparkles:"
+                src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20">
+              <br />
+              We release <a href="https://github.com/lixiny/OakInk"> <span class="font-weight-bold">oakink
+                  toolkit</span></a> -- a Python package that provides data loading and visualization.
 
-        <!-- <div class="section">
-          <h3>Video</h3>
-          <div class="embedded-video">
-            <iframe src="https://www.youtube.com/embed/Q4wyBaZeBw0" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </div> -->
-
-        <div class="section">
-          <h3>Contact</h3>
-          <p>Send any comments or questions to Lixin Yang: <a href="mailto:siriusyang@sjtu.edu.cn">email</a>.</p>
-        </div>
-
-        <hr>
-        <p>Last updated on 2022/03/28</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Mar 03, 2022</th>
+            <td>
+              OakInk has been accepted by <a href="https://cvpr2022.thecvf.com">CVPR 2022</a>.
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
-  </div>
-</body>
+
+    <br />
+
+
+    <div class="abstract">
+      <h3>Abstract</h3>
+      <div class="clearfix">
+        <p>Learning how humans manipulate objects requires machines to acquire knowledge from two perspectives: one
+          for understanding object affordances and the other for learning human's interactions based on the
+          affordances. Even though these two knowledge bases are crucial, we find that current databases lack a
+          comprehensive awareness of them.</p>
+        <p>
+          In this work, we propose a multi-modal and rich-annotated knowledge
+          repository, <span class="font-weight-bold">oakink</span>, for visual and cognitive understanding of
+          hand-object interactions.
+          We start to collect 1,800 common household objects and annotate their affordances to construct the first
+          knowledge base: <span class="font-weight-bold">oak</span>.
+          Given the affordance, we record rich human interactions with 100 selected objects in <span
+            class="font-weight-bold">oak</span>.
+          Finally, we transfer the interactions on the 100 recorded objects to their virtual counterparts through a
+          novel method: <i>tink</i>.
+          The recorded and transferred hand-object interactions constitute the second knowledge base: <span
+            class="font-weight-bold">ink</span>.
+          As a result, <span class="font-weight-bold">oakink</span> contains 50,000 distinct affordance-aware and
+          intent-oriented hand-object
+          interactions.
+        </p>
+
+      </div>
+
+      <div class="profile float left">
+        <figure>
+          <picture>
+            <div class="center">
+              <img class="center one rounded" src='assets/teaser.png' width="80%" height="auto" alt="teaser.png"
+                style="background-color:#f5f4cf;"">
+            </div>
+          </picture>
+        </figure>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- Download -->
+    <div class=" downloads">
+              <h3>Downloads</h3>
+              <p>Download from Dropbox.</p>
+              <div>
+                <h4> OakInk-Image -- image-based subset. </h4>
+                <ul>
+                  <li>Download the image sequences. We divided the image data into 11 parts (10G each).</li>
+                  <ul>
+                    <li><a href="https://www.dropbox.com/s/bxq7ndmzq8nh41z/oakink_image_v2.zip?dl=0"
+                        target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                        </span>oakink_image_v2.zip</a> <i style="color:gray;">(10G)</i></li>
+                    <li><a href="https://www.dropbox.com/s/ss8e9f8mal1gy40/oakink_image_v2.z01?dl=0"
+                        target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                        </span>oakink_image_v2.z01</a> <i style="color:gray;">(10G)</i></li>
+                    <li><a href="https://www.dropbox.com/s/otfr6lwanwo4bdj/oakink_image_v2.z02?dl=0"
+                        target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                        </span>oakink_image_v2.z02</a> <i style="color:gray;">(10G)</i></li>
+                    <li><a href="https://www.dropbox.com/s/6oywsqhr59adc43/oakink_image_v2.z03?dl=0"
+                        target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                        </span>oakink_image_v2.z03</a> <i style="color:gray;">(10G)</i></li>
+                    <li><a href="https://www.dropbox.com/s/58yuihk9ajmejql/oakink_image_v2.z04?dl=0"
+                        target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                        </span>oakink_image_v2.z04</a> <i style="color:gray;">(10G)</i></li>
+                    <li><a href="https://www.dropbox.com/s/l3wtowitj37lqqf/oakink_image_v2.z05?dl=0"
+                        target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                        </span>oakink_image_v2.z05</a> <i style="color:gray;">(10G)</i></li>
+                    <li><a href="https://www.dropbox.com/s/x6kxd4g59gkv30r/oakink_image_v2.z06?dl=0"
+                        target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                        </span>oakink_image_v2.z06</a> <i style="color:gray;">(10G)</i></li>
+                    <li><a href="https://www.dropbox.com/s/zz2bt9dk0vwyi5e/oakink_image_v2.z07?dl=0"
+                        target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                        </span>oakink_image_v2.z07</a> <i style="color:gray;">(10G)</i></li>
+                    <li><a href="https://www.dropbox.com/s/iew1j79hd1lrwgv/oakink_image_v2.z08?dl=0"
+                        target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                        </span>oakink_image_v2.z08</a> <i style="color:gray;">(10G)</i></li>
+                    <li><a href="https://www.dropbox.com/s/gfoqwgw8pyxlms6/oakink_image_v2.z09?dl=0"
+                        target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                        </span>oakink_image_v2.z09</a> <i style="color:gray;">(10G)</i></li>
+                    <li><a href="https://www.dropbox.com/s/2w46ywjcbh7a8kd/oakink_image_v2.z10?dl=0"
+                        target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                        </span>oakink_image_v2.z10</a> <i style="color:gray;">(10G)</i></li>
+                  </ul>
+                  <li> The object models used in OakInk-image:
+                    <a href="https://www.dropbox.com/s/26lplakbvi51sfw/obj.zip?dl=0" target="_blank"><span class="icon">
+                        <i class="fas fa-download"></i>
+                      </span>obj.zip</a> <i style="color:gray;">(7.2M) </i>
+                  </li>
+                  </li>
+                  <li> Hand & object pose annotations for OakInk-image:
+                    <a href="https://forms.gle/g6QEmmCeZYLGaVe29" target="_blank"><span class="icon"> <i
+                          class="fas fa-download"></i>
+                      </span>anno.zip</a> <i style="color:gray;">(3.4G) </i>
+                  </li>
+                  </li>
+              </div>
+              <br />
+              <div>
+                <h4> OakInk-Shape -- shape-based subset. </h4>
+                <ul>
+                  <li>Meta files for managing object' attributes: <a
+                      href="https://www.dropbox.com/s/uh7o95lx0qbp05r/metaV2.zip?dl=0" target="_blank"><span
+                        class="icon"> <i class="fas fa-download"></i>
+                      </span>metaV2.zip</a></i>
+                  </li>
+                  <li>All interacting hand parameters (pose, shape, root) in <span class="font-weight-bold">ink</span>
+                    base: <a href="https://www.dropbox.com/s/swqintyk2g64bed/oakink_shape_v2.zip?dl=0"
+                      target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                      </span>oakink_shape_v2.zip</a> <i style="color:gray;">(46M)</i>
+                  </li>
+                  <li>All the <i>real</i> object models <span class="font-weight-bold">ink</span> base: <a
+                      href="https://www.dropbox.com/s/sq38cjn4finrt2q/OakInkObjectsV2.zip?dl=0" target="_blank"><span
+                        class="icon"> <i class="fas fa-download"></i>
+                      </span>OakInkObjectsV2.zip</a> <i style="color:gray;">(1G)</i>
+                  </li>
+                  <li>All the <i>virtual</i> object models <span class="font-weight-bold">ink</span> base: <a
+                      href="https://www.dropbox.com/s/1zgy6zjk33s5q6y/OakInkVirtualObjectsV2.zip?dl=0"
+                      target="_blank"><span class="icon"> <i class="fas fa-download"></i>
+                      </span>OakInkVirtualObjectsV2.zip</a> <i style="color:gray;">(1G)</i>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            After downloading all the above .zip files, you need to arrange them in the following structure:
+            <pre>
+  <code>
+    ├── image
+    │   ├── anno.zip
+    │   ├── obj.zip
+    │   └── stream_zipped
+    │       ├── oakink_image_v2.z01
+    │       ├── ...
+    │       ├── oakink_image_v2.z10
+    │       └── oakink_image_v2.zip
+    └── shape
+        ├── metaV2.zip
+        ├── OakInkObjectsV2.zip
+        ├── oakink_shape_v2.zip
+        └── OakInkVirtualObjectsV2.zip
+  </code>
+</pre>
+
+
+
+            </code>
+
+            <br />
+
+            <div class="code">
+              <h3>Code</h3>
+
+              <div class="table-responsive">
+                <table class="table table-sm table-borderless">
+
+                  <tr>
+                    <th scope="row">
+                      <div class="center">
+                        <img src="./assets/GitHub-Mark/PNG/GitHub-Mark-64px.png" width="60%" height="auto">
+                      </div>
+
+                    </th>
+                    <td>
+                      <a href="https://github.com/lixiny/OakInk"> <span class="font-weight-bold">OakInk
+                          Toolkit</span></a> --
+                      <span>A Python package that provides data loading and visualization for the OakInk dataset.</span>
+                      <br>
+                      <a href="#"> <span class="font-weight-bold">Tink</span></a> --
+                      <span>For transferring hand pose from source object to target objects. (TODO)</span>
+                    </td>
+                  </tr>
+
+                </table>
+              </div>
+
+              <div class="row content">
+
+                <div>
+
+                </div>
+              </div>
+            </div>
+
+            <br />
+
+            <!-- About -->
+            <div class="citation">
+              <h3>Citation</h3>
+              <p>If you find OakInk dataset and oikit useful for your research, please considering cite us:</p>
+              <pre><code>
+@InProceedings{YangCVPR2022OakInk,
+    author = {Yang, Lixin and Li, Kailin and Zhan, Xinyu and Wu, Fei and Xu, Anran and Liu, Liu and Lu, Cewu},
+    title = {{OakInk}: A Large-Scale Knowledge Repository for Understanding Hand-Object Interaction},
+    booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year = {2022},
+}
+</code></pre>
+            </div>
+
+            <br />
+
+            <!-- contact -->
+            <div class="Contact">
+              <h3>Contact</h3>
+              <p>For further information, please contact siriusyang[at]sjtu[dot]edu[dot]cn</p>
+            </div>
+
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container mt-0">
+        © Copyright 2022. <a href="https://mvig.sjtu.edu.cn" target="_blank" rel="noopener noreferrer">Machine Vision
+          and Intelligence Group</a> @ Shanghai Jiao Tong University. All rights reserved.
+
+      </div>
+    </footer>
 
 </html>
