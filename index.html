@@ -148,19 +148,23 @@
         <h2>Update</h2>
         <ul>
           <li>
-            <b><tt>Oct,18,2022</tt></b>: &nbsp  <b>OakInk public v2.1 -- a new version of OakInk-Image's annotation is released! </b>
-          <br />Within this update: 
-          <b>1).</b> Several artifacts have been fixed, including: a). wrong poses of hand and objects; b). time delay; c). contact surface mismatches; 
-          <b>2).</b> A "release" tag of hand-over sequence is added to the annotation.
-          <br /><br />
-          <p style="background-color:yellow;">
-            <a><strong>NOTE</strong></a>: &nbsp;
-            If you downloaded the OakInk dataset before <u>11:00 AM October 18, 2022, UTC</u>, 
-            You <b>only</b> need to replace the previous anno.zip (3.4G) by this newly released:  <a href="https://forms.gle/g6QEmmCeZYLGaVe29"
-            target="_blank"><span class="icon"> <i class="fas fa-download"></i>
-            </span>anno_v2.1.zip</a> <i style="color:gray;">(3.6G) </i>. 
-            Unzip it and keep the same file structures as before. And don't forget to download and install the latest <a href="https://github.com/lixiny/OakInk"> <b>OakInk Toolkit</b></a>.  
-          </p>
+            <b><tt>Oct,18,2022</tt></b>: &nbsp <b>OakInk public v2.1 -- a new version of OakInk-Image's annotation is
+              released! </b>
+            <br />Within this update:
+            <b>1).</b> Several artifacts have been fixed, including: a). wrong poses of hand and objects; b). time
+            delay; c). contact surface mismatches;
+            <b>2).</b> A "release" tag of hand-over sequence is added to the annotation.
+            <br /><br />
+            <p style="background-color:yellow;">
+              <a><strong>NOTE</strong></a>: &nbsp;
+              If you downloaded the OakInk dataset before <u>11:00 AM October 18, 2022, UTC</u>,
+              You <b>only</b> need to replace the previous anno.zip (3.4G) by this newly released: <a
+                href="https://forms.gle/g6QEmmCeZYLGaVe29" target="_blank"><span class="icon"> <i
+                    class="fas fa-download"></i>
+                </span>anno_v2.1.zip</a> <i style="color:gray;">(3.6G) </i>.
+              Unzip it and keep the same file structures as before. And don't forget to download and install the latest
+              <a href="https://github.com/lixiny/OakInk"> <b>OakInk Toolkit</b></a>.
+            </p>
           </li>
           <br>
           <li>
@@ -173,7 +177,8 @@
           <li> -->
           <li>
             <b><tt>Jun,28,2022</tt></b>: &nbsp OakInk <b>public v2</b> has been released.<br />
-            <a href="https://github.com/lixiny/OakInk"> <b>OakInk Toolkit</b></a> -- a Python package that provides data loading, has been released.
+            <a href="https://github.com/lixiny/OakInk"> <b>OakInk Toolkit</b></a> -- a Python package that provides data
+            loading, has been released.
           </li>
           <li>
             <b><tt>Mar,03,2022</tt></b>: &nbsp <img class="emoji" title=":sparkles:" alt=":sparkles:"
@@ -267,7 +272,8 @@
             </li>
           </ul>
           <p>
-            To ensure latest version, please use <b>sha256sum</b> to calculate the checksum of the <a>anno_v{x}.{x}.zip</a>. You will get:
+            To ensure latest version, please use <b>sha256sum</b> to calculate the checksum of the
+            <a>anno_v2.1.zip</a>. You will get:
           </p>
           <div class="text-center">
             <code>dc64402d65cff3c1e2dd40fb560fcc81e3757e1936f44d353c381874489d71ea</code>
@@ -298,14 +304,13 @@
                 </span>OakInkVirtualObjectsV2.zip</a> <i style="color:gray;">(1G)</i>
             </li>
           </ul>
-          <br />
         </div>
         After downloading all the above <tt>.zip</tt> files, you need to arrange them in the following structure:
         <div class="language-plaintext highlighter-rouge">
           <div class="highlight text-left">
             <pre class="highlight small"><code> $OAKINK_DIR
     ├── image
-    │   ├── anno.zip
+    │   ├── anno_v2.1.zip
     │   ├── obj.zip
     │   └── stream_zipped
     │       ├── oakink_image_v2.z01
@@ -316,15 +321,64 @@
         ├── metaV2.zip
         ├── OakInkObjectsV2.zip
         ├── oakink_shape_v2.zip
-        └── OakInkVirtualObjectsV2.zip
-                              </code></pre>
+        └── OakInkVirtualObjectsV2.zip</code>
+      </pre>
           </div>
         </div>
 
 
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Prepare</h2>
+
+        <p>
+          For the <code>image/anno_v2.1.zip</code>, <code>image/obj.zip</code>, and <code>shape/*.zip</code>,
+          simply <i>unzip</i> it.
+        </p>
+
+        <p>
+          For the 11 split zip files in <code>image/stream_zipped/</code>, you need to <i>cd</i> into the
+          <code>image/</code> directory, run: <br>
+          <b><code>zip -F ./stream_zipped/oakink_image_v2.zip --out single-archive.zip</code></b> <br>
+          This will combine the split zip files into a single <code>.zip</code> file at
+          <code>image/single-archive.zip</code>.
+        </p>
+        <p>
+          Finally, <i>unzip</i> the combined archive, run: <br>
+          <b><code>unzip single-archive.zip</code></b>
+
+        </p>
+        After all the extractions are finished, you will have a your <code>OAKINK_DIR</code> as the following structure:
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight text-left">
+            <pre class="highlight small"><code> $OAKINK_DIR
+    .
+    ├── image
+    │   ├── anno
+    │   ├── obj
+    │   └── stream_release_v2
+    │       ├── A01001_0001_0000
+    │       ├── A01001_0001_0001
+    │       ├── A01001_0001_0002
+    │       ├── ....
+    │
+    └── shape
+        ├── metaV2
+        ├── OakInkObjectsV2
+        ├── oakink_shape_v2
+        └── OakInkVirtualObjectsV2</code>
+      </pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
     <br>
+
+    <!--Datasheet and Explanation-->
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <h2>Datasheet & Explanation</h2>
@@ -344,7 +398,8 @@
               camera calibration (intrinsics & extrinsics); subject ID; intent ID; data split files (train/val/test).
             </li>
             <li>
-              <b>Visualization Code</b>: <a href="https://github.com/lixiny/OakInk/blob/main/scripts/viz_oakink_image.py">viz_oakink_image.py</a>
+              <b>Visualization Code</b>: <a
+                href="https://github.com/lixiny/OakInk/blob/main/scripts/viz_oakink_image.py">viz_oakink_image.py</a>
             </li>
           </ul>
 
@@ -511,12 +566,14 @@ Val set
           <h4>Dataset Structure </h4>
           <ul>
             <li>
-              <b>Annotation</b>:  Object's <tt>.obj</tt> models in its canonical system; 
-              MANO's pose & shape parameters and vertex 3D locations in object's canonical system; 
-              subject ID; intent ID; origin sequence ID; Alternative hand pose, shape, and vertex (if any, for hand-over pair).
+              <b>Annotation</b>: Object's <tt>.obj</tt> models in its canonical system;
+              MANO's pose & shape parameters and vertex 3D locations in object's canonical system;
+              subject ID; intent ID; origin sequence ID; Alternative hand pose, shape, and vertex (if any, for hand-over
+              pair).
             </li>
             <li>
-              <b>Visualization Code</b>: <a href="https://github.com/lixiny/OakInk/blob/main/scripts/viz_oakink_shape.py">viz_oakink_shape.py</a>
+              <b>Visualization Code</b>: <a
+                href="https://github.com/lixiny/OakInk/blob/main/scripts/viz_oakink_shape.py">viz_oakink_shape.py</a>
             </li>
           </ul>
 
@@ -525,7 +582,8 @@ Val set
         <br />
         <p>
           <strong>OakInk-Shape</strong>
-          provides data split for tasks of <b>Grasp Generation</b>, <b>Intent-based Interaction Generation</b>, and <b>Handover Generation</b>. 
+          provides data split for tasks of <b>Grasp Generation</b>, <b>Intent-based Interaction Generation</b>, and
+          <b>Handover Generation</b>.
           These three tasks share one data split. Details as below.
         </p>
 
@@ -537,22 +595,23 @@ Val set
         <!-- SP0 -->
         <p>
           We use the remainder of <tt>int</tt>(object ID's hash code) mod 10 as the split separator:
-          <ul>
-            <li>
-              obj_id_hash % 10 < 8 in <tt><b>train</b></tt> split
-            </li>
-            <li>
-              obj_id_hash % 10 == 8 in <tt><b>val</b></tt> split
-            </li>
-            <li>
-              obj_id_hash % 10 == 9 in <tt><b>test</b></tt> split
-            </li>
-          </ul> 
+        <ul>
+          <li>
+            obj_id_hash % 10 < 8 in <tt><b>train</b></tt> split
+          </li>
+          <li>
+            obj_id_hash % 10 == 8 in <tt><b>val</b></tt> split
+          </li>
+          <li>
+            obj_id_hash % 10 == 9 in <tt><b>test</b></tt> split
+          </li>
+        </ul>
 
         </p>
         <div class="language-plaintext highlighter-rouge">
           <div class="highlight text-left">
-            <pre class="highlight small"><code>* Train set
+            <pre
+              class="highlight small"><code>* Train set
 1,308 objects with 49,302 grasping hand poses. 
 Including 5 intents: 11,804 use, 9,165 hold, 9,425 lift-up, 9,454 hand-out, and 9,454 receive.
 
